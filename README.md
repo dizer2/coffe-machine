@@ -10,4 +10,4 @@
 
 ---
 
-https://yurii-email.netlify.app/
+https://coffe-machine.netlify.app/
