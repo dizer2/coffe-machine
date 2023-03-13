@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="https://cdn-icons-png.flaticon.com/128/3361/3361135.png">
+	<link rel="stylesheet" href="./style/style.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<title>Coffe machine</title>
+</head>
+<body>
+	
+
+	<div class="wrap">
+		<div class="coffe__box">
+			<div class="coffe">
+				<div class="coffe__header">
+					<div class="header__box">
+						<div class="header__left">
+							<div class="header__play">
+								<svg class="header__icon header__start" width="29" height="30" viewBox="0 0 29 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M26.571 11.0289C29.8097 12.7597 29.8097 17.2403 26.571 18.9711L7.01589 29.4218C3.86822 31.104 -1.57396e-07 28.9145 0 25.4507L9.49755e-07 4.54934C1.10715e-06 1.08552 3.86822 -1.10397 7.01588 0.578214L26.571 11.0289Z" fill="#FFD1AB"/>
+								</svg>
+								<svg class="header__icon header__pause"  width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M0 6C0 3.17157 0 1.75736 0.87868 0.87868C1.75736 0 3.17157 0 6 0C8.82843 0 10.2426 0 11.1213 0.87868C12 1.75736 12 3.17157 12 6V24C12 26.8284 12 28.2426 11.1213 29.1213C10.2426 30 8.82843 30 6 30C3.17157 30 1.75736 30 0.87868 29.1213C0 28.2426 0 26.8284 0 24V6Z" fill="#FFD1AB"/>
+								<path d="M18 6C18 3.17157 18 1.75736 18.8787 0.87868C19.7574 0 21.1716 0 24 0C26.8284 0 28.2426 0 29.1213 0.87868C30 1.75736 30 3.17157 30 6V24C30 26.8284 30 28.2426 29.1213 29.1213C28.2426 30 26.8284 30 24 30C21.1716 30 19.7574 30 18.8787 29.1213C18 28.2426 18 26.8284 18 24V6Z" fill="#FFD1AB"/>
+								</svg>
+									
+
+
+									
+							</div>
+						</div>
+						<div class="header__right">
+							<img id="kokao" class="header__kokao" src="./img/kokao.png" alt="kokao">
+							<div class="header__taste">
+								<div class="taste__left">
+									<p class="header__text" id="ts1">Late</p>
+									<p class="header__text" id="ts2">Espresso</p>
+								</div>
+								<div class="taste__right">
+									<p class="header__text" id="ts3">Mocha</p>
+									<p class="header__text" id="ts4">Macchiato</p>
+								</div>
+					
+
+
+
+							</div>
+							<div class="header__press">
+								<p class="header__text header__change-text">Click start</p>
+
+							</div>
+							<div class="header__loading">
+								<p class="header__loading-text" id="progress__text">0%</p>
+								<div class="header__loadin-box">
+									<div class="progress" id="progress"></div>
+								</div>
+							</div>
+
+
+						</div>
+
+					</div>
+				</div>
+				<div class="coffe__main">
+					<div class="main__left">
+						<div class="main__plus" id="main__plus-left">
+							<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M9.6087 1.1087C9.6087 0.49638 9.11232 0 8.5 0C7.88768 0 7.3913 0.49638 7.3913 1.1087V7.3913H1.1087C0.496381 7.3913 0 7.88768 0 8.5C0 9.11232 0.49638 9.6087 1.1087 9.6087H7.3913V15.8913C7.3913 16.5036 7.88768 17 8.5 17C9.11232 17 9.6087 16.5036 9.6087 15.8913V9.6087H15.8913C16.5036 9.6087 17 9.11232 17 8.5C17 7.88768 16.5036 7.3913 15.8913 7.3913H9.6087V1.1087Z" fill="#FFD1AB"/>
+							</svg>
+								
+						</div>
+						<div class="main__container">
+							<div class="container__water" id="milk"></div>
+						</div>
+					</div>
+
+					<div class="main__center">
+						<div class="center__cast-box">
+							<img class="main__logo-img" src="./img/logo.svg" alt="logo">
+						</div>
+						<div class="center__cast-line"></div>
+						<div class="center__cast"></div>
+						<div class="cast" id="cast"></div>
+						<img class="cup" id="cup" src="./img/cup.svg" alt="cuo">
+
+					</div>
+
+					<div class="main__rigth">
+						<div class="main__plus" id="main__plus-right">
+							<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M9.6087 1.1087C9.6087 0.49638 9.11232 0 8.5 0C7.88768 0 7.3913 0.49638 7.3913 1.1087V7.3913H1.1087C0.496381 7.3913 0 7.88768 0 8.5C0 9.11232 0.49638 9.6087 1.1087 9.6087H7.3913V15.8913C7.3913 16.5036 7.88768 17 8.5 17C9.11232 17 9.6087 16.5036 9.6087 15.8913V9.6087H15.8913C16.5036 9.6087 17 9.11232 17 8.5C17 7.88768 16.5036 7.3913 15.8913 7.3913H9.6087V1.1087Z" fill="#FFD1AB"/>
+							</svg>
+								
+						</div>
+						<div class="main__container">
+							<div class="container__water" id="water"></div>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="coffe__bottom"></div>
+
+
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+	<script src="./script/script.js"></script>
+</body>
+</html>
